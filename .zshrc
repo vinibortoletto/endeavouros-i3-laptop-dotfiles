@@ -28,12 +28,12 @@ function update() {
 }
 
 function phps() {
-    nohup flatpak run --file-forwarding com.jetbrains.PhpStorm "$@" &
+    nohup flatpak run --file-forwarding com.jetbrains.PhpStorm "$@" > /dev/null 2>&1 &
     disown
 }
 
 function idea() {
-    nohup flatpak run --file-forwarding com.jetbrains.IntelliJ-IDEA-Community "$@" &
+    nohup flatpak run --file-forwarding com.jetbrains.IntelliJ-IDEA-Community "$@" > /dev/null 2>&1 &
     disown
 }
 
@@ -50,3 +50,19 @@ function dc() {
         echo "Invalid command. Usage: dc up"
     fi
 }
+
+#############
+### Alias ###
+#############
+
+alias y='yay'
+alias yi='yay -S --noconfirm'
+alias ys='yay -Ss'
+alias yr='yay -R --noconfirm'
+alias c='cp'
+alias cf='cp -r'
+alias rf='rm -rf'
+alias n='nano'
+alias ff='find ~ -iname'
+alias fd='find ~ -iname'
+alias fixpassword='faillock --reset'

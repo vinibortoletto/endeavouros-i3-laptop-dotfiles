@@ -47,7 +47,7 @@ else
         echo "󰁻 ${BATTERY_POWER}%"
 
     elif [[ "${BATTERY_POWER}" -gt 20 && "${BATTERY_POWER}" -le 30 ]]; then
-        echo "󰁼 ${BATTERY_POWER}%"
+        echo "󰂇 ${BATTERY_POWER}%"
 
     elif [[ "${BATTERY_POWER}" -gt 30 && "${BATTERY_POWER}" -le 40 ]]; then
         echo "󰁼 ${BATTERY_POWER}%"

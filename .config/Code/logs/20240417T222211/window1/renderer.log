@@ -1,0 +1,5 @@
+2024-04-17 22:22:13.460 [info] Initial editor state {"filesToOpenOrCreate":[{"fileUri":{"$mid":1,"path":"/home/vinicius/.config/picom/picom.conf","scheme":"file"},"type":1,"exists":true,"options":{}}],"filesToDiff":[],"filesToMerge":[]}
+2024-04-17 22:22:13.979 [info] Started local extension host with pid 29187.
+2024-04-17 22:22:14.322 [info] Started initializing default profile extensions in extensions installation folder. file:///home/vinicius/.vscode/extensions
+2024-04-17 22:22:14.777 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/vinicius/.vscode/extensions
+2024-04-17 22:22:17.676 [info] [perf] Render performance baseline is 104ms
