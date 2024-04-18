@@ -77,7 +77,7 @@ colors {
 #################
 
 # apps
-bindsym $mod+w exec --no-startup-id /usr/bin/brave --password-store=gnome
+bindsym $mod+w exec --no-startup-id flatpak run com.brave.Browser
 bindsym $mod+c exec --no-startup-id /usr/bin/code
 bindsym $mod+i exec --no-startup-id /usr/bin/idea
 bindsym $mod+shift+t exec --no-startup-id /usr/bin/qbittorrent
@@ -247,7 +247,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec_always --no-startup-id redshift -P -O 3000
 
 # set wallpaper
-exec_always --no-startup-id && feh --bg-fill --no-xinerama ~/Pictures/backgrounds/artur-rutkowski-x48QL8gNYZ8-unsplash.jpg
+exec_always --no-startup-id && sleep 1 && feh --bg-fill --no-xinerama ~/Pictures/backgrounds/artur-rutkowski-x48QL8gNYZ8-unsplash.jpg
 
 ######################
 ### FLOATING RULES ###
