@@ -183,4 +183,9 @@ echo_doing 'Copying monitor file'
 cp -r .screenlayout ~/.screenlayout
 echo_done
 
+### Installing Nordic theme ###
+echo_doing 'Installing Nordic theme'
+yay -S --noconfirm nordzy-icon-theme nordzy-cursors nordic-theme
+echo_done
+
 reboot_prompt
