@@ -1,0 +1,13 @@
+#!/bin/bash
+
+battery_info=$(bluetoothctl info | grep "Battery Percentage")
+
+battery_name=$(bluetoothctl info | grep "Name:")
+battery_name=$(echo "$battery_name" | awk '{print substr($0, index($0,$2))}')
+
+#battery_percentage=$(echo "$battery_info" | awk '{print $4}'
+battery_percentage=$(echo "$battery_info" | awk -F'[()]' '{print $2}')
+
+battery_percentage=$(echo "$battery_percentage" | sed 's/0x//')
+
+echo "󰁹 $battery_name: $battery_percentage%"
