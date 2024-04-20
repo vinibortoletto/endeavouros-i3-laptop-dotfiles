@@ -188,7 +188,7 @@ echo_done
 ###############
 
 echo_doing 'Installing Nordic theme'
-cp -r .themes ~/.themes
+cp -r .themes ~/
 echo_done
 
 echo_doing 'Installing Nordzy icon theme'
