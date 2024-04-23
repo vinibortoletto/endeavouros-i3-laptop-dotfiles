@@ -2,7 +2,7 @@
 
 url=""
 
-input=$(rofi -dmenu -p "Search: " -config ~/.config/rofi/rofidmenu.rasi)
+input=$(rofi -dmenu -p "Search " -config ~/.config/rofi/rofidmenu.rasi)
 
 if [[ $input == gg* ]]; then
     search_term=$(echo $input | sed 's/^gg //')
