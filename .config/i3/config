@@ -136,7 +136,7 @@ bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+q kill
 
 # lock the system
-bindsym $mod+l exec ~/.config/i3/scripts/blur-lock
+bindsym $mod+l exec --no-startup-id ~/.config/i3/scripts/blur-lock
 
 # restart i3 inplace
 bindsym $mod+Shift+r restart
@@ -167,7 +167,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+Shift+s layout stacking
+# bindsym $mod+Shift+s layout stacking
 bindsym $mod+Shift+g layout tabbed
 bindsym $mod+Shift+e layout toggle split
 
@@ -288,11 +288,17 @@ bindsym $mod+d exec rofi -modi drun -show drun \
 bindsym $mod+t exec rofi -show window \
 		-config ~/.config/rofi/rofidmenu.rasi
 
-bindsym $mod+Escape exec rofi -show power-menu -modi power-menu:rofi-power-menu \
+# bindsym $mod+Escape exec rofi -show power-menu -modi power-menu:rofi-power-menu \
+# 		-config ~/.config/rofi/rofidmenu.rasi
+
+bindsym $mod+Escape exec rofi -show power-menu -modi power-menu:~/.config/rofi/power-menu \
 		-config ~/.config/rofi/rofidmenu.rasi
 
+exec --no-startup-id greenclip daemon
 bindsym $mod+p exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' \
 		-config ~/.config/rofi/rofidmenu.rasi
+
+bindsym $mod+shift+s exec ~/.config/rofi/web-search
 
 #################################
 ### Monitor resolution config ###

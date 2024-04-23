@@ -114,7 +114,7 @@ button.selected {
 inputbar {
     spacing:    0;
     text-color: @normal-foreground;
-    padding:    0px;
+    padding:    10px;
     background-color: @grey-2;
 }
 case-indicator {

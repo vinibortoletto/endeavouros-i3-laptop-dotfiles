@@ -114,7 +114,6 @@ typeset -A menu
 # Menu with keys/commands
 
 menu=(
-  [  Shutdown]="systemctl poweroff"
   [  Reboot]="systemctl reboot"
   [  Suspend]="systemctl suspend"
   [  Hibernate]="systemctl hibernate"

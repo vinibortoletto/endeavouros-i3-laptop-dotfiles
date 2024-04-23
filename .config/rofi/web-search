@@ -1,0 +1,51 @@
+#!/bin/bash
+
+url=""
+
+input=$(rofi -dmenu -p "Search: " -config ~/.config/rofi/rofidmenu.rasi)
+
+if [[ $input == gg* ]]; then
+    search_term=$(echo $input | sed 's/^gg //')
+    url="https://www.google.com/search?q=$search_term"
+    xdg-open "$url"
+
+elif [[ $input == dd* ]]; then
+    search_term=$(echo $input | sed 's/^dd //')
+    url="https://duckduckgo.com/?hps=1&q=$search_term"
+    xdg-open "$url"
+
+elif [[ $input == tt* ]]; then
+    search_term=$(echo $input | sed 's/^tt //')
+    url="https://1337x.to/search/$search_term/1/"
+    xdg-open "$url"
+
+  elif [[ $input == yt* ]]; then
+    search_term=$(echo $input | sed 's/^yt //')
+    url="https://www.youtube.com/results?search_query=$search_term"
+    xdg-open "$url"
+
+  elif [[ $input == ph* ]]; then
+    search_term=$(echo $input | sed 's/^ph //')
+    url="https://www.phind.com/search?q=$search_term"
+    xdg-open "$url"
+
+  elif [[ $input == ali* ]]; then
+    search_term=$(echo $input | sed 's/^ali //')
+    url="https://pt.aliexpress.com/w/wholesale-$search_term.html?spm=a2g0o.home.search.0"
+    xdg-open "$url"
+
+  elif [[ $input == ml* ]]; then
+    search_term=$(echo $input | sed 's/^ml //')
+    url="https://lista.mercadolivre.com.br/$search_term"
+    xdg-open "$url"
+    
+  elif [[ $input == sp* ]]; then
+    search_term=$(echo $input | sed 's/^sp //')
+    url="https://shopee.com.br/search?keyword=$search_term"
+    xdg-open "$url"
+    
+fi
+
+
+
+
