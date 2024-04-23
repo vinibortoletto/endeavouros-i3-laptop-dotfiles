@@ -3,7 +3,7 @@
  * Maintainer: joekamprad [joekamprad //a_t// endeavouros.com]
  *******************************************************/
 configuration {
-    font:                "Noto Sans Regular 10";
+    font:                "Noto Sans Regular 14";
     show-icons:          true;
     icon-theme:          "Qogir";
     display-drun:        "Apps";
@@ -13,15 +13,15 @@ configuration {
     sidebar-mode:        false;
 }
 
-@import "~/.config/rofi/arc_dark_transparent_colors.rasi"
+@import "~/.config/rofi/nord_colors.rasi"
 
 window {
-    background-color: @background;
+    background-color: @grey-1;
     border:           0;
     padding:          30;
 }
 listview {
-    lines:   10;
+    lines:   2;
     columns: 3;
 }
 mainbox {
@@ -30,55 +30,59 @@ mainbox {
 }
 message {
     border:       2px 0px 0px;
-    border-color: @separatorcolor;
+    border-color: @grey-2;
     padding:      1px;
 }
 textbox {
-    text-color: @foreground;
+    text-color: @grey-1;
 }
 listview {
     fixed-height: 0;
-    border:       8px 0px 0px;
-    border-color: @separatorcolor;
+    border:       3px 0px 0px;
+    border-color: @grey-2;
     spacing:      8px;
     scrollbar:    false;
-    padding:      2px 0px 0px;
+    padding:      10px 0px 0px;
 }
 element {
     border:  0;
-    padding: 1px;
+    padding: 20px;
 }
 element-text {
     background-color: inherit;
     text-color:       inherit;
 }
 element.normal.normal {
-    background-color: @normal-background;
-    text-color:       @normal-foreground;
+    background-color: @grey-1;
+    text-color:       @white-1;
+    border: 1px;
+    border-color: @grey-2;
 }
 element.normal.urgent {
-    background-color: @urgent-background;
-    text-color:       @urgent-foreground;
+    background-color: @red;
+    text-color:       @red;
 }
 element.normal.active {
-    background-color: @active-background;
-    text-color:       @active-foreground;
+    background-color: @red;
+    text-color:       @red;
 }
 element.selected.normal {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+    background-color: @grey-4;
+    text-color:       @white-1;
 }
 element.selected.urgent {
-    background-color: @selected-urgent-background;
-    text-color:       @selected-urgent-foreground;
+    background-color: @red;
+    text-color:       @red;
 }
 element.selected.active {
     background-color: @selected-active-background;
     text-color:       @selected-active-foreground;
 }
 element.alternate.normal {
-    background-color: @alternate-normal-background;
-    text-color:       @alternate-normal-foreground;
+    background-color: @grey-1;
+    text-color:       @white-1;
+    border: 1px;
+    border-color: @grey-2;
 }
 element.alternate.urgent {
     background-color: @alternate-urgent-background;
@@ -110,7 +114,8 @@ button.selected {
 inputbar {
     spacing:    0;
     text-color: @normal-foreground;
-    padding:    1px;
+    padding:    0px;
+    background-color: @grey-2;
 }
 case-indicator {
     spacing:    0;
