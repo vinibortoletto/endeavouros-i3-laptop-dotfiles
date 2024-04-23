@@ -300,9 +300,9 @@ bindsym $mod+p exec rofi -modi "clipboard:greenclip print" -show clipboard -run-
 
 exec_always --no-startup-id ~/.screenlayout/monitor.sh
 
-##################################
-### Start Easy Effects on boot ###
-##################################
+####################
+### Startup apps ###
+####################
 
-exec --no-startup-id flatpak run com.github.wwmm.easyeffects
-
+# exec --no-startup-id flatpak run com.github.wwmm.easyeffects
+exec --no-startup-id /usr/bin/thorium-browser
