@@ -147,6 +147,10 @@ yay -S --noconfirm alacritty
 notify-send 'Alacritty intalled!'
 echo_done
 
+echo_doing 'Installing Easy Effects'
+flatpak install -y com.github.wwmm.easyeffects
+echo_done
+
 ########################
 ### BLUETOOTH CONFIG ###
 ########################
