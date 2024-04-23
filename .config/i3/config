@@ -77,7 +77,7 @@ colors {
 #################
 
 # apps
-bindsym $mod+w exec --no-startup-id flatpak run com.brave.Browser
+bindsym $mod+w exec --no-startup-id /usr/bin/thorium-browser
 bindsym $mod+c exec --no-startup-id /usr/bin/code
 bindsym $mod+i exec --no-startup-id flatpak run com.jetbrains.IntelliJ-IDEA-Community
 bindsym $mod+shift+t exec --no-startup-id /usr/bin/qbittorrent
@@ -209,7 +209,7 @@ set $ws10 "10:  "
 # bind program to workspace and focus to them on startup:
 assign [class="Alacritty"] $ws1
 assign [class="Thunar"] $ws1
-assign [class="Brave-browser"] $ws2
+assign [class="Thorium-browser"] $ws2
 assign [class="Code"] $ws3
 assign [class="jetbrains-idea-ce"] $ws3
 assign [class="beekeeper-studio"] $ws4
@@ -221,7 +221,7 @@ assign [class="easyeffects"] $ws10
 # automatic set focus new window if it opens on another workspace then the current:
 for_window [class=Alacritty] focus
 for_window [class=Thunar] focus
-for_window [class=Brave-browser] focus
+for_window [class=Thorium-browser] focus
 for_window [class=Code] focus
 for_window [class=jetbrains-idea-ce] focus
 for_window [class=beekeeper-studio] focus
