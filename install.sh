@@ -24,6 +24,11 @@ echo_done 'Configuring natural scroll'
 sudo cp 40-libinput.conf /usr/share/X11/xorg.conf.d
 echo_done
 
+echo_doing 'Black list Noveau Driver'
+sudo cp blacklist-nouveau.conf /etc/modprobe.d/
+sudo dracut -f
+echo_done
+
 ###############
 ### Theming ###
 ###############
