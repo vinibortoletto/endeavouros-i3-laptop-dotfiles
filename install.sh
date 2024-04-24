@@ -173,10 +173,10 @@ echo_done
 ### ROFI CONFIG ###
 ###################
 
-echo_doing 'Installing Rofi puglins'
-yay -S --noconfirm rofi-power-menu
-notify-send 'Rofi plugins intalled!'
-echo_done
+#echo_doing 'Installing Rofi puglins'
+#yay -S --noconfirm rofi-power-menu
+#notify-send 'Rofi plugins intalled!'
+#echo_done
 
 ##################
 ### FIX EMOJIS ###
