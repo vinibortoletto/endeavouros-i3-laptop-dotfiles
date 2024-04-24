@@ -26,6 +26,7 @@ echo_done
 
 echo_doing 'Black list Noveau Driver'
 sudo cp blacklist-nouveau.conf /etc/modprobe.d/
+sudo cp 20-intel.conf /etc/X11/xorg.conf.d/
 sudo dracut -f
 echo_done
 
