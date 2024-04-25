@@ -1,9 +1,6 @@
 #!/bin/bash
 
-# Define options
-options="󰐥  Shutdown\n  Reboot\n󰍃  Logout\n  Lock"
-
-# Get user selection using rofi
+options="Shutdown\nReboot\nLogout\nLock"
 choice=$(echo -e "$options" | rofi -dmenu -p "Power Menu" -i -config ~/.config/rofi/rofidmenu.rasi)
 
 if [[ "$choice" == "Lock" ]]; then
@@ -13,5 +10,6 @@ elif [[ "$choice" == "Shutdown" ]]; then
 elif [[ "$choice" == "Reboot" ]]; then
   reboot
 elif [[ "$choice" == "Logout" ]]; then
-  loginctl terminate-session ${XDG_SESSION_ID-}
+  # loginctl terminate-session ${XDG_SESSION_ID-}
+  i3-msg exit
 fi
