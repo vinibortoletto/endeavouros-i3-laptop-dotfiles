@@ -83,6 +83,7 @@ bindsym $mod+i exec --no-startup-id flatpak run com.jetbrains.IntelliJ-IDEA-Comm
 bindsym $mod+shift+t exec --no-startup-id /usr/bin/qbittorrent
 bindsym $mod+s exec --no-startup-id flatpak run com.stremio.Stremio
 bindsym Print exec --no-startup-id scrot ~/Pictures/%d-%m-%Y-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
+bindsym $mod+b exec --no-startup-id ~/.config/i3/scripts/connect-bluetooth.sh
 
 # folders
 bindsym $mod+Shift+d exec --no-startup-id thunar Downloads
@@ -178,8 +179,8 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 10%+ && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 10%- && pkill -RTMIN+1 i3blocks
 
 # mute
 bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
@@ -229,7 +230,7 @@ for_window [class=qBittorrent] focus
 for_window [class=Stremio] focus
 
 # picom
-exec_always --no-startup-id picom --config  ~/.config/picom/picom.conf
+exec_always --no-startup-id sleep 3 && picom --config ~/.config/picom/picom.conf
 
 #################
 ### AUTOSTART ###
