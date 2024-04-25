@@ -220,14 +220,15 @@ assign [class="Stremio"] $ws6
 assign [class="easyeffects"] $ws10
 
 # automatic set focus new window if it opens on another workspace then the current:
-for_window [class=Alacritty] focus
-for_window [class=Thunar] focus
-for_window [class=Thorium-browser] focus
-for_window [class=Code] focus
-for_window [class=jetbrains-idea-ce] focus
-for_window [class=beekeeper-studio] focus
-for_window [class=qBittorrent] focus
-for_window [class=Stremio] focus
+# for_window [class=Alacritty] focus
+# for_window [class=Thunar] focus
+# for_window [class=Thorium-browser] focus
+# for_window [class=Code] focus
+# for_window [class=jetbrains-idea-ce] focus
+# for_window [class=beekeeper-studio] focus
+# for_window [class=qBittorrent] focus
+# for_window [class=Stremio] focus
+for_window [urgent=latest] focus
 
 # picom
 exec_always --no-startup-id sleep 3 && picom --config ~/.config/picom/picom.conf
